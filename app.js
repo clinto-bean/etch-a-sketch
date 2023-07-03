@@ -1,12 +1,12 @@
 teconst etchASketch = () => {
   let pixels
-  let grid = 1
+  let grid
   const shake = document.getElementById("shake")
 
   const generateArea = () => {
     grid = prompt("How many rows and columns do you need? Maximum: 100.")
     if (grid > 100){
-      generateArea()
+      grid = 100
     } else {
     const canvas = () => {
       for (let i = 0; i < grid ** 2; i++) {
