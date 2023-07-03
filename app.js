@@ -4,7 +4,8 @@ const etchASketch = () => {
   const shake = document.getElementById("shake")
 
   const generateArea = () => {
-    grid = prompt("How many rows and columns do you need?")
+    grid = prompt("How many rows and columns do you need? Maximum: 100.")
+    if (grid <= 100){
     const canvas = () => {
       for (let i = 0; i < grid ** 2; i++) {
         const screen = document.getElementById("screen")
@@ -19,6 +20,10 @@ const etchASketch = () => {
       }
     }
     canvas(grid)
+  }
+  }
+  else {
+    grid = prompt("How many rows and columns do you need? Maximum: 100.")
   }
   const addPixel = (pixel) => {
     if (pixel.classList.contains("clicked")) {
