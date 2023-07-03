@@ -1,4 +1,4 @@
-teconst etchASketch = () => {
+const etchASketch = () => {
   let pixels
   let grid
   const shake = document.getElementById("shake")
