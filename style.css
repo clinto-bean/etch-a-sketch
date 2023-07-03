@@ -1,0 +1,90 @@
+:root {
+  --black: hsl(0, 0%, 2%);
+  --red: hsl(0, 71%, 38%);
+  --white: hsl(0, 0%, 93%);
+  --gray: hsl(0, 10%, 60%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+#toy {
+  width: clamp(300px, 800px, 50%);
+  aspect-ratio: 4/3.5;
+  background: var(--red);
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--black);
+}
+
+#screen {
+  height: 65%;
+  width: 65%;
+  background: var(--white);
+  box-shadow: 0 0 10px var(--black);
+  border-radius: inherit;
+  display: grid;
+  overflow: hidden;
+}
+
+#buttons {
+  position: absolute;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  bottom: 0;
+}
+
+#shake {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  background-color: var(--white);
+  color: var(--red);
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px var(--gray);
+  height: 100%;
+  width: fit-content;
+}
+
+.pixel:hover:not(.clicked) {
+  background-color: var(--gray);
+}
+
+.clicked:hover {
+  background-color: var(--red);
+}
+
+.clicked {
+  background-color: var(--black);
+}
+
+.left-button,
+.right-button {
+  position: relative;
+  content: "";
+  width: 10%;
+  aspect-ratio: 1;
+  background-color: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--black);
+}
